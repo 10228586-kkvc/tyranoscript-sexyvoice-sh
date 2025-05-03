@@ -1,0 +1,2 @@
+# tyranoscript-sexyvoice-sh
+AIで生成した声優SH風音声ファイルを使ってティラノスクリプトでプレイヤーを作成しました。
