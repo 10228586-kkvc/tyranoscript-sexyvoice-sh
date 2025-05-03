@@ -1,0 +1,23 @@
+.layer_free>div {
+	width: 100%;
+	height: 100%;
+}
+
+/* ボタンのデザイン */
+div#StartButton {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: auto;
+	height: 2em;
+	padding: .5em 1em 0;
+	background-color: #FF71B8;
+	color:#FFF;
+	border-radius: 1em;
+	font-size: 48px;
+	font-weight: bold;
+	letter-spacing: .5em;
+}
+
