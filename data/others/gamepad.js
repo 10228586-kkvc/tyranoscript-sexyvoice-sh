@@ -50,21 +50,22 @@ function loop() {
 
 		// ボタン検知
 		if(gp.buttons[0].pressed) {if(bt[0]==0) {bt[0]=1;$("html").trigger({type: 'keydown', keyCode: 13});console.log("A");}} else bt[0]=0;// Aボタン:Key[ENTER]
-		if(gp.buttons[1].pressed) {if(bt[1]==0) {bt[1]=1;$("html").trigger({type: 'keydown', keyCode:  8});}} else bt[1]=0;// Bボタン:Key[BACKSPACE]
-		if(gp.buttons[2].pressed) {if(bt[2]==0) {bt[2]=1;$("html").trigger({type: 'keydown', keyCode: 17});}} else bt[2]=0;// Xボタン:Key[CTR]
-		if(gp.buttons[3].pressed) {if(bt[3]==0) {bt[3]=1;$("html").trigger({type: 'keydown', keyCode: 32});}} else bt[3]=0;// Yボタン:Key[SPACE]
-		if(gp.buttons[4].pressed) {}//  LBボタン
-		if(gp.buttons[5].pressed) {}//  RBボタン
-		if(gp.buttons[6].pressed) {}//  LTボタン
-		if(gp.buttons[7].pressed) {}//  RTボタン
-		if(gp.buttons[8].pressed) {}//  BACKボタン
-		if(gp.buttons[9].pressed) {}//  STARTボタン
-		if(gp.buttons[10].pressed) {}// L3ボタン
-		if(gp.buttons[11].pressed) {}// R3ボタン
-		if(gp.buttons[12].pressed) {}// UPボタン
-		if(gp.buttons[13].pressed) {}// DOWNボタン
-		if(gp.buttons[14].pressed) {}// LEFTボタン
-		if(gp.buttons[15].pressed) {}// RIGHTボタン
+		if(gp.buttons[1].pressed) {if(bt[1]==0) {bt[1]=1;$("html").trigger({type: 'keydown', keyCode:  8});console.log("B");}} else bt[1]=0;// Bボタン:Key[BACKSPACE]
+		if(gp.buttons[2].pressed) {if(bt[2]==0) {bt[2]=1;$("html").trigger({type: 'keydown', keyCode: 17});console.log("X");}} else bt[2]=0;// Xボタン:Key[CTR]
+		if(gp.buttons[3].pressed) {if(bt[3]==0) {bt[3]=1;$("html").trigger({type: 'keydown', keyCode: 32});console.log("Y");}} else bt[3]=0;// Yボタン:Key[SPACE]
+		if(gp.buttons[4].pressed) {console.log("4");}//  LBボタン
+		if(gp.buttons[5].pressed) {console.log("5");}//  RBボタン
+		if(gp.buttons[6].pressed) {console.log("6");}//  LTボタン
+		if(gp.buttons[7].pressed) {console.log("7");}//  RTボタン
+		if(gp.buttons[8].pressed) {console.log("8");}//  BACKボタン
+		if(gp.buttons[9].pressed) {console.log("9");}//  STARTボタン
+		if(gp.buttons[10].pressed) {console.log("10")}// L3ボタン
+		if(gp.buttons[11].pressed) {console.log("11")}// R3ボタン
+		if(gp.buttons[12].pressed) {if(bt[12]==0) {bt[12]=1;$("html").trigger({type: 'keydown', keyCode: 38});console.log("UP");}} else bt[12]=0;// UPボタン
+		if(gp.buttons[13].pressed) {if(bt[13]==0) {bt[13]=1;$("html").trigger({type: 'keydown', keyCode: 40});console.log("DOWN");}} else bt[13]=0;// DOWNボタン
+		if(gp.buttons[14].pressed) {if(bt[14]==0) {bt[14]=1;$("html").trigger({type: 'keydown', keyCode: 37});console.log("LEFT");}} else bt[14]=0;// LEFTボタン
+		if(gp.buttons[15].pressed) {if(bt[15]==0) {bt[15]=1;$("html").trigger({type: 'keydown', keyCode: 39});console.log("RIGHT");}} else bt[15]=0;// RIGHTボタン
+
 		//if(gp.buttons[16].pressed) {}// HOMEボタン
 
 		// 十字キー検知
