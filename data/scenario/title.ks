@@ -14,6 +14,7 @@
 
 [iscript]
 $(".layer_free>div").click(function(){
+	event.stopPropagation();// 親イベントを無効化
 	// jumpだとなぜかエラーになるのでキーイベントを発生させる
 	$("html").trigger({type: 'keydown', keyCode: 40});
 });
