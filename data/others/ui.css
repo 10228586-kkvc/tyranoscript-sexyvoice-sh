@@ -21,3 +21,136 @@ div#StartButton {
 	letter-spacing: .5em;
 }
 
+div#TopButton, 
+div#BottomButton, 
+div#LeftButton, 
+div#RightButton, 
+div#RepeatButton, 
+div#CloseButton, 
+div#MassageButton {
+	display: none;
+	position: absolute;
+}
+
+div#TopButton.Active, 
+div#BottomButton.Active, 
+div#LeftButton.Active, 
+div#RightButton.Active, 
+div#RepeatButton.Active, 
+div#CloseButton.Active, 
+div#MassageButton.Active {display: inline-block;}
+
+/* 横長表示 */
+div#TopButton.Desktop {
+	left: 730px;
+	top:   35px;
+	width: 460px;
+	height: 70px;
+}
+
+div#BottomButton.Desktop {
+	left: 730px;
+	top:  625px;
+	width: 460px;
+	height: 70px;
+}
+
+div#LeftButton.Desktop {
+	left:  35px;
+	top:  260px;
+	width:  100px;
+	height: 210px;
+}
+
+div#RightButton.Desktop {
+	left: 1785px;
+	top:   260px;
+	width:  100px;
+	height: 210px;
+}
+
+div#RepeatButton.Desktop {
+	left: 0;
+	top:  0px;
+	width:  108px;
+	height: 108px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+div#CloseButton.Desktop {
+	left: 1812px;
+	top:  0px;
+	width:  108px;
+	height: 108px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+div#MassageButton.Desktop {
+	left: 1812px;
+	top:  0px;
+	width:  108px;
+	height: 108px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 縦長表示 */
+div#TopButton.Mobile {
+	left: 435px;
+	top:   40px;
+	width:  210px;
+	height: 100px;
+}
+div#BottomButton.Mobile {
+	left: 435px;
+	top: 1160px;
+	width:  210px;
+	height: 100px;
+}
+div#LeftButton.Mobile {
+	left: 35px;
+	top:  440px;
+	width:   70px;
+	height: 460px;
+}
+div#RightButton.Mobile {
+	left: 975px;
+	top:  440px;
+	width:   70px;
+	height: 460px;
+}
+div#RepeatButton.Mobile {
+	left: 0;
+	top:  0px;
+	width:  108px;
+	height: 108px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+div#CloseButton.Mobile {
+	left: 972px;
+	top:    0px;
+	width:  108px;
+	height: 108px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+div#MassageButton.Mobile {
+	left: 972px;
+	top:    0px;
+	width:  108px;
+	height: 108px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* 上下左右ボタン */
+div#TopButton>img, 
+div#BottomButton>img, 
+div#LeftButton>img, 
+div#RightButton>img {filter: drop-shadow(.5em .5em rgba(0, 0, 0, .3));}
+
+div#TopButton:hover, 
+div#BottomButton:hover, 
+div#LeftButton:hover, 
+div#RightButton:hover, 
+div#RepeatButton:hover, 
+div#CloseButton:hover, 
+div#MassageButton:hover {cursor: pointer;}
+

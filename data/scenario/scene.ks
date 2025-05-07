@@ -12,9 +12,13 @@ TYRANO.kag.ftag.startTag("stopbgm",{target:"se", stop: "true"});
 
 [endscript]
 
+
+
 ; 画面切り替え処理
 ;[call storage="resizecall.ks"]
 ;[set_resizecall storage="resizecall.ks"]
+
+
 
 ;-------------------------------------------------------------------------------
 ; 開始
@@ -22,6 +26,44 @@ TYRANO.kag.ftag.startTag("stopbgm",{target:"se", stop: "true"});
 [eval exp="f.backLabel = {storage: 'title.ks',target: '*title',next: false}"]
 @layopt layer=message0 visible=true
 [cm]
+
+
+[html]
+<div id="TopButton" class="[emb exp='sf.className'] Active"><img src="./data/image/[emb exp='sf.topImg']" alt="上ボタン"></div>
+<div id="BottomButton" class="[emb exp='sf.className'] Active"><img src="./data/image/[emb exp='sf.bottomImg']" alt="下ボタン"></div>
+<div id="LeftButton" class="[emb exp='sf.className'] Active"><img src="./data/image/[emb exp='sf.leftImg']" alt="左ボタン"></div>
+<div id="RightButton" class="[emb exp='sf.className'] Active"><img src="./data/image/[emb exp='sf.rightImg']" alt="右ボタン"></div>
+<div id="RepeatButton" class="[emb exp='sf.className'] Active"><img src="./data/image/[emb exp='sf.repeatImg']" alt="リピートボタン"></div>
+<div id="CloseButton" class="[emb exp='sf.className'] Active"><img src="./data/image/[emb exp='sf.closeImg']" alt="クローズボタン"></div>
+<div id="MassageButton" class="[emb exp='sf.className']"><img src="./data/image/[emb exp='sf.messageImg']" alt="メッセージボタン"></div>
+[endhtml]
+
+[iscript]
+$(".layer_free>div").click(function(){
+	event.stopPropagation();// 親イベントを無効化
+	// jumpだとなぜかエラーになるのでキーイベントを発生させる
+	$("html").trigger({type: 'keydown', keyCode: 40});
+});
+$("#TopButton"   ).click(function(){event.stopPropagation();$("html").trigger({type: 'keydown', keyCode: 38});console.log("Key[↑]");});
+$("#BottomButton").click(function(){event.stopPropagation();$("html").trigger({type: 'keydown', keyCode: 40});console.log("Key[↓]");});
+$("#LeftButton"  ).click(function(){event.stopPropagation();$("html").trigger({type: 'keydown', keyCode: 37});console.log("Key[←]");});
+$("#RightButton" ).click(function(){event.stopPropagation();$("html").trigger({type: 'keydown', keyCode: 39});console.log("Key[→]");});
+
+$("#RepeatButton" ).click(function(){event.stopPropagation();$("html").trigger({type: 'keydown', keyCode: 8});console.log("Key[BACKSPACE]");});
+
+$("#CloseButton"  ).click(function(){
+	event.stopPropagation();
+	$("html").trigger({type: 'keydown', keyCode: 32});
+	console.log("Key[SPACE]");
+});
+
+$("#MassageButton").click(function(){
+	event.stopPropagation();
+	$("html").trigger({type: 'keydown', keyCode: 32});
+	console.log("Key[SPACE]");
+});
+[endscript]
+
 
 [iscript]
 TYRANO.kag.ftag.startTag("stopbgm",{target:"se", buf:"1", stop: "true"});
@@ -34,6 +76,8 @@ if(f.hlv!=f.plv){
 }
 $('html').off("keydown", sf.changeVoiceKey);// キーイベントオフ
 $('html').on("keydown", sf.changeVoiceKey);// キーイベントオン
+
+
 
 [endscript]
 ; ここで[endscript]と[iscript]を入れないとなぜかシーンが止まらなくなる

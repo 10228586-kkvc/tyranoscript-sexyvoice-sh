@@ -61,9 +61,18 @@ sf.normalKey = function (e) {
 			break;
 
 		case 32: // Key[SPACE]
+			$("#TopButton").toggleClass("Active");
+			$("#BottomButton").toggleClass("Active");
+			$("#LeftButton").toggleClass("Active");
+			$("#RightButton").toggleClass("Active");
+			$("#RepeatButton").toggleClass("Active");
+			$("#CloseButton").toggleClass("Active");
+			$("#MassageButton").toggleClass('Active');
+
 			// hideMessage実行
 			if(TYRANO.kag.stat.is_hide_message)TYRANO.kag.layer.showMessageLayers();
 			else TYRANO.kag.ftag.startTag("hidemessage");
+
 			break;
 
 		case 17: // Key[CTR]

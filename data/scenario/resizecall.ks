@@ -45,6 +45,11 @@ f.font_size = 69;
 
 sf.bgImg = "title_1080x1920.jpg";// タイトル画像
 sf.bgArr = ["L1_1080x1920.jpg", "L2_1080x1920.jpg", "L3_1080x1920.jpg", "L4_1080x1920.jpg"];// シナリオ画像
+sf.className = "Mobile"// 縦長表示
+sf.topImg    = "icon-top-210x100.svg";//    上ボタン
+sf.bottomImg = "icon-bottom-210x100.svg";// 下ボタン
+sf.leftImg   = "icon-left-70x460.svg";//    左ボタン
+sf.rightImg  = "icon-right-70x460.svg";//   右ボタン
 
 [endscript]
 
@@ -92,6 +97,11 @@ f.font_size = 64;
 
 sf.bgImg = "title_1920x1080.jpg";// タイトル画像
 sf.bgArr = ["L1_1920x1080.jpg", "L2_1920x1080.jpg", "L3_1920x1080.jpg", "L4_1920x1080.jpg"];// シナリオ画像
+sf.className = "Desktop"// 横長表示
+sf.topImg    = "icon-top-460x70.svg";//    上ボタン
+sf.bottomImg = "icon-bottom-460x70.svg";// 下ボタン
+sf.leftImg   = "icon-left-100x210.svg";//  左ボタン
+sf.rightImg  = "icon-right-100x210.svg";// 右ボタン
 
 [endscript]
 
@@ -126,6 +136,10 @@ sf.bgArr = ["L1_1920x1080.jpg", "L2_1920x1080.jpg", "L3_1920x1080.jpg", "L4_1920
 [iscript]
 
 $(".message_inner").find("span").css("font-size",f.font_size+"px");
+
+sf.repeatImg  = "icon-repeat-108x108.svg";//  リピートボタン
+sf.closeImg   = "icon-close-108x108.svg";//   クローズボタン
+sf.messageImg = "icon-message-108x108.svg";// メッセージボタン
 
 [endscript]
 
